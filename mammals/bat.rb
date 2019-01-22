@@ -1,3 +1,6 @@
+require_relative '../animal'
+require_relative '../animal_types/mammals'
+
 class Bat < Animal
     include Mammals
 
@@ -8,7 +11,14 @@ class Bat < Animal
 
     def eat
         puts 'They like to eat insects'
-    end
+    end  
 
-    
+    def flying
+        Transport.wings
+    end 
 end
+
+jeff = Bat.new
+jeff.speak
+jeff.eat
+jeff.flying
